@@ -5,26 +5,18 @@ import java.util.Stack;
 
 public class StackStudy {
     public static void main(String[] args) {
-        Stack<Integer> stack_int = new Stack<Integer>();
 
-        stack_int.push(1);
-        stack_int.push(2);
-        stack_int.push(3);
-
-        System.out.println(stack_int);
-
-        stack_int.pop();
-        System.out.println(stack_int);
-
-        stack_int.pop();
-        System.out.println(stack_int);
-
-        stack_int.pop();
-        System.out.println(stack_int);
+        MyStack<Integer> stack = new MyStack<Integer>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
 
     }
 
-    public class MyStack<T>{
+    public static class MyStack<T>{
         private ArrayList<T> stack = new ArrayList<T>();
 
         public void push(T item){
@@ -32,11 +24,10 @@ public class StackStudy {
         }
 
         public T pop(){
-            if(isEmpty()){
+            if(isEmpty())
                 return null;
-            }
 
-            return stack.remove(0);
+            return stack.remove(stack.size() -1);
         }
 
         public boolean isEmpty(){
