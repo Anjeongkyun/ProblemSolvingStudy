@@ -19,7 +19,7 @@ public class Split {
         int mediumSize = list.size() / 2;
 
         List<Integer> leftArray = list.subList(0, mediumSize);
-        List<Integer> rightArray = list.subList(mediumSize, list.size() - 1);
+        List<Integer> rightArray = list.subList(mediumSize, list.size());
 
         System.out.println(leftArray);
         System.out.println(rightArray);
