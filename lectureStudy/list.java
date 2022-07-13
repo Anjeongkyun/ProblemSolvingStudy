@@ -1,4 +1,4 @@
-package fastcam_1;
+package lectureStudy;
 
 import java.util.ArrayList;
 

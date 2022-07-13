@@ -1,7 +1,6 @@
-package fastcam_1;
+package lectureStudy;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
 public class StackStudy {
     public static void main(String[] args) {

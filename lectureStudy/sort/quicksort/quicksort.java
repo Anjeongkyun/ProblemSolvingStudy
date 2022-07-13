@@ -1,4 +1,4 @@
-package quicksort;
+package lectureStudy.sort.quicksort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +21,6 @@ public class quicksort {
         int pivot = list.get(0);
         ArrayList<Integer> leftArray = new ArrayList<Integer>();
         ArrayList<Integer> rightArray = new ArrayList<Integer>();
-A
         for(int i = 1; i < list.size(); i++){
             if(list.get(i) > pivot){
                 rightArray.add(list.get(i));

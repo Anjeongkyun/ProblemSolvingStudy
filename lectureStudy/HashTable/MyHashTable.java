@@ -1,4 +1,4 @@
-package HashTable;
+package lectureStudy.HashTable;
 
 public class MyHashTable {
     public static void main(String[] args) {

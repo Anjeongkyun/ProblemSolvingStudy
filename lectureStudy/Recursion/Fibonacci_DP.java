@@ -1,4 +1,4 @@
-package Recursion;
+package lectureStudy.Recursion;
 
 public class Fibonacci_DP {
     public static void main(String[] args) {

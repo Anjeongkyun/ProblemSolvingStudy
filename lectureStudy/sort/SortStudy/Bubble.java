@@ -1,4 +1,4 @@
-package SortStudy;
+package lectureStudy.sort.SortStudy;
 
 import java.util.ArrayList;
 import java.util.Collections;

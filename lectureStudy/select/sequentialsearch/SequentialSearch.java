@@ -1,4 +1,4 @@
-package sequentialsearch;
+package lectureStudy.select.sequentialsearch;
 
 import java.util.ArrayList;
 import java.util.Scanner;
