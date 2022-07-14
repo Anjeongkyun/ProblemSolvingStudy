@@ -3,7 +3,7 @@ package lectureStudy.greedy;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Greedy {
+public class GreedyCoin {
 
     public static void main(String[] args) {
         //4720을 500,100, 50, 10 동전으로 최소한의 개수 구하기
