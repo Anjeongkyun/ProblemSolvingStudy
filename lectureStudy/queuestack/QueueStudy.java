@@ -1,4 +1,4 @@
-package lectureStudy;
+package lectureStudy.queuestack;
 
 import java.util.ArrayList;
 
