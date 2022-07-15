@@ -21,9 +21,11 @@ public class GreedyCoin {
             totalCoinCount += coinNum; // 토탈 동전 개수
             price -= coinNum * coinList.get(i); // 몫 * 금액하여 나머지 대입
             details.add(coinNum);
+
+            System.out.println(coinList.get(i) + "원: " + coinNum + "개");
         }
 
-        System.out.println(details);
+        System.out.println("총 동전 갯수:" + totalCoinCount);
 
     }
 }
