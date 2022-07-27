@@ -21,14 +21,21 @@ public class Q9663 {
 
     static void recFunc(int row){
         if(row == N +1){
-            if(validationCheck()){
-                ans++;
-            }
+            ans++;
         }else{
             for(int c =1; c <=N; c++){
-                col[row] = c;
-                recFunc(  row + 1);
-                col[row] = 0;
+                boolean possible = true;
+                for(int i=1; i<= row -1; i++){
+                    if(attackable(row, c, i , col[i])){
+                        possible = false;
+                        break;
+                    }
+                }
+                if(possible){
+                    col[row] = c;
+                    recFunc(row + 1);
+                    col[row] = 0;
+                }
             }
         }
     }
