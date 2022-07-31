@@ -21,6 +21,7 @@ public class Q2908 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
+        br.close();
     }
 
     static void solve(){
@@ -29,10 +30,7 @@ public class Q2908 {
         sb = new StringBuilder();
         int num2 = Integer.parseInt(sb.append(M).reverse().toString());
 
-        if(num1 > num2)
-            System.out.println(num1);
-        else
-            System.out.println(num2);
+        System.out.println(num1> num2 ? num1 :num2);
 
     }
 }
