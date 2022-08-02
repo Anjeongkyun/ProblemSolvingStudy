@@ -2,50 +2,48 @@ package baekjoon.map;
 
 import com.sun.deploy.util.ArrayUtil;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 
 public class Q10815 {
+    static BufferedReader br;
+    static BufferedWriter bw;
+    static StringBuilder sb;
+    static StringTokenizer st;
+    static int[] oneArr;
+    static int[] twoArr;
+    static int N, M;
+
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+        input();
 
-        int N = Integer.parseInt(br.readLine());
-        int[] oneArr = new int[N];
+    }
+    static void input() throws IOException {
+        br = new BufferedReader(new InputStreamReader(System.in));
+        bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        sb = new StringBuilder();
 
-        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        N = Integer.parseInt(br.readLine());
+        oneArr = new int[N];
+        st = new StringTokenizer(br.readLine()," ");
         for (int i = 0; i < N; i++) {
             oneArr[i] = Integer.parseInt(st.nextToken());
         }
 
-
-        int M = Integer.parseInt(br.readLine());
-        int[] twoArr = new int[M];
-
+        M = Integer.parseInt(br.readLine());
+        twoArr = new int[M];
         st = new StringTokenizer(br.readLine()," ");
         for (int i = 0; i < M; i++) {
             twoArr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i = 0; i < M; i++) {
-            boolean isCheck = false;
-            for (int j = 0; j < N; j++) {
-                if (twoArr[i] == oneArr[j]) {
-                    isCheck = true;
-                    break;
-                }
-            }
+        br.close();
+    }
+    static boolean searchFunc(int[] arr, int searchItem){
+        Arrays.sort(oneArr);
 
-            if(isCheck){
-                sb.append(1).append(' ');
-            }else{
-                sb.append(0).append(' ');
-            }
-        }
-        System.out.println(sb.toString());
-
+        return false;
     }
 }
