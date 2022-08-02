@@ -1,2 +1,9 @@
-# ProblemSolvingStudy
-Algorithm Study
+# Algorithm-Study
+
+<br><hr><br>
+
+### 다시 볼 문제들
+* 집합과 맵
+  * Q10815 (숫자 카드)
+    * **[이진탐색 사용]**
+    * 2022.08.03 풀이 - 1
