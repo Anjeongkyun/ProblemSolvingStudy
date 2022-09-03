@@ -10,31 +10,26 @@ public class L1_BinaryGap {
         // 100000 -> 0
         // 11111 -> 0
 
-        int N = 9;
+        int N = 529;
         String binary = Integer.toBinaryString(N);
-        String[] binaryArr = binary.split("");
         System.out.println(binary);
+        String[] binaryArr = binary.split("");
 
-        int tempVal = 0;
-        List<Integer> answerList = new ArrayList<>();
-        answerList.add(0);
+        int zeroCnt = 0;
+        int tempZeroCnt = 0;
+        List<Integer> zeroCntList = new ArrayList<>();
 
-        boolean isZero = false;
-        for (int i = 0; i < binaryArr.length; i++) {
-            if(binaryArr[i].contains("1")){
-                isZero = true;
-                tempVal++;
+        for(String str : binaryArr){
+            if(str.equals("0")){
+                zeroCnt ++;
             }else{
-                if(binaryArr[i].contains("1")){
-                    isZero = false;
-                    answerList.add(tempVal);
-                    tempVal = 0;
-                }
-                if(isZero)
-                    tempVal++;
+                tempZeroCnt = zeroCnt;
+                zeroCnt = 0;
+                zeroCntList.add(tempZeroCnt);
             }
         }
 
-        System.out.println(Collections.max(answerList));
+        System.out.println(Collections.max(zeroCntList));
+
     }
 }
