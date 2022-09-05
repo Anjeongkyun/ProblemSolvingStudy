@@ -6,21 +6,15 @@ public class L2_OddOccurrencesInArray {
     public static void main(String[] args) {
         int[] candiArr = {9, 3, 9, 7, 3, 9, 9};
 
-        Map<Integer, Integer> candiMap = new HashMap<>();
-
+        Set<Integer> candiSet = new HashSet<>();
         for (int i = 0; i < candiArr.length; i++) {
-            if(candiMap.containsKey(candiArr[i]))
-                candiMap.put(candiArr[i], candiMap.get(candiArr[i]) + 1);
+            if(candiSet.contains(candiArr[i]))
+                candiSet.remove(candiArr[i]);
             else
-                candiMap.put(candiArr[i], 1);
-
+                candiSet.add(candiArr[i]);
         }
 
-        for(int candi : candiMap.keySet()){
-            if(candiMap.get(candi) % 2 == 1){
-                System.out.println(candi);
-                break;
-            }
-        }
+        int answer = candiSet.iterator().next();
+        System.out.println(answer);
     }
 }
