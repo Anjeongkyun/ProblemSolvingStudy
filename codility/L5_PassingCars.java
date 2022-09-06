@@ -3,17 +3,22 @@ package codility;
 public class L5_PassingCars {
     public static void main(String[] args) {
         int[] arr = {0, 1, 0, 1, 1};
+        solve(arr);
+    }
 
-        int chkCnt = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] == 1) continue;
-
-            for (int j = i; j < arr.length; j++) {
-                if(arr[j] == 1)
-                    chkCnt++;
-
+    private static int solve(int[] A){
+        int zeroCnt = 0;
+        int pairCnt = 0;
+        for(int n : A){
+            if (n == 0) {
+                zeroCnt++;
+            } else if (n == 1) {
+                pairCnt += zeroCnt;
             }
         }
-        System.out.println(chkCnt);
+        if(pairCnt > 1000000000 || pairCnt < 0)
+            return -1;
+
+        return pairCnt;
     }
 }
