@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Q15651 {
+public class Q15651_1 {
 
     static StringBuilder sb = new StringBuilder();
     static int N,M;

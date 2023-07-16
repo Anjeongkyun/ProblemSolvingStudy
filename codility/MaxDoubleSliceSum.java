@@ -5,8 +5,6 @@ public class MaxDoubleSliceSum {
         int sum_from_front = 0;
         int sum_from_back = 0;
     }
-
-    class MaxDoubleSliceSum {
         public int solution(int[] A) {
             if (A == null || A.length == 3) {
                 return 0;
@@ -39,4 +37,3 @@ public class MaxDoubleSliceSum {
             return maxSlice;
         }
     }
-}
